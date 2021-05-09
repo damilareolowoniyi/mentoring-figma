@@ -1,0 +1,36 @@
+ <html lang="en">
+
+ <head>
+     <link rel="stylesheet" href="css/main.css">
+     <title> UX DEMO</title>
+ </head>
+
+ <body>
+     <h1> Welcome to Damilare Demo</h1>
+     <button id="btn">GET STARTED</button>
+
+     <div class="panel">
+         <img src="images/quote.png" id="quote">
+         <p>Some great line about engineering and how we did something everyone will love. </p>
+         <img src="images/quote.png" id="quote">
+     </div>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
+
+     <!-- Animation Work will here  -->
+     <script>
+        document.getElementById('btn').addEventListener('click', function(){
+            
+            
+            TweenMax.to('.panel', 1.5, {scale:1, height:'100vh'});
+       
+            TweenMax.to('p', 1, {opacity: 1, y: 20, delay: 1.4, ease: Elastic.easeOut.config(1, 0.2)});
+
+            TweenMax.to('#quote', 1, {opacity: 1, y: 0, delay: 1.2, ease: Elastic.easeOut.config(1, 0.2)});
+       
+        });
+
+     </script>
+
+ </body>
+
+ </html>
